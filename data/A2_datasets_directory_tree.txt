@@ -1,0 +1,46 @@
+/
+├── Condo Conversions in City of Boston 2015-2024
+│   ├── boston_condo_conversions.csv
+│   ├── boston_condo_conversions_metadata.txt
+│   ├── cambridge_condo_conversions.csv
+│   └── cambridge_condo_conversions_metadata.txt
+├── Corporate ownership rates and owner occupancy rates in Boston neighborhoods, 2004-2024
+│   ├── Boston_Neighborhoods_Zipcodes.csv
+│   ├── Boston_Neighborhoods_Zipcodes_Metadata.txt
+│   ├── Census_and_Corp_Ownership_and_Occupancy_Over_Time.csv
+│   ├── Census_and_Corp_Ownership_and_Occupancy_Over_Time_Metadata.txt
+│   ├── Corp_Ownership_and_Occupancy_Over_Time.csv
+│   └── Corp_Ownership_and_Occupancy_Over_Time_Metadata.txt
+├── MBTA Network
+│   ├── README.md
+│   ├── mbta_lines
+│   │   ├── Metadata_mbta_lines.txt
+│   │   ├── mbta_lines.geojson
+│   │   └── mbta_lines_deduplicated.geojson
+│   ├── mbta_lines_with_buffer
+│   │   ├── Metadata_mbta_lines_with_buffer.txt
+│   │   ├── mbta_lines_with_buffer.geojson
+│   │   └── mbta_lines_with_buffer_deduplicated.geojson
+│   ├── mbta_stops
+│   │   ├── Metadata_mbta_stops_collapsed.txt
+│   │   ├── mbta_stops.geojson
+│   │   ├── mbta_stops_collapsed.geojson
+│   │   └── mbta_stops_with_buffer_collapsed.geojson
+│   └── mbta_stops_with_buffer
+│       ├── Metadata_mbta_stops_with_buffer_collapsed.txt
+│       ├── mbta_stops_with_buffer.geojson
+│       └── mbta_stops_with_buffer_collapsed.geojson
+├── Redlining
+│   ├── mapping_inequality_redlining.geojson
+│   └── mapping_inequality_redlining_metadata.xlsx
+├── Residential sales data in the City of Boston, 2000-2023
+│   ├── A2_EDA_Residential.csv
+│   └── A2_EDA_Residential_Metadata.xlsx
+└── Single family zoning vs other housing zoning in Metro Boston
+    ├── Metadata_housing_sf_other_w_census.txt
+    ├── Metro Boston municipality boundary
+    │   ├── metro_boston_municipalities.geojson
+    │   └── metro_boston_municipalities_metadata.txt
+    ├── housing_sf_other_w_census.csv
+    ├── housing_sf_other_w_census.geojson
+    └── housing_sf_other_w_census_metadata.xlsx

@@ -1,0 +1,230 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<title>Vis & Society Assignment 2</title>
+	<link rel="stylesheet" href="https://vis-society.github.io/assignments/report.css" />
+</head>
+
+<body>
+	<header>
+		<h1>
+			<small>Assignment 2</small>
+			Exploratory Data Analysis
+		</h1>
+
+		<p>
+			<strong>Wesley She</strong>
+		</p>
+	</header>
+	<main>
+		<section>
+			<h2>Subtheme: Corporate Landlords &amp; Evictions</h2>
+
+			<h3>Overall Analysis Questions</h3>
+			<ol>
+				<li>
+					<p><strong>Does the spatial concentration of corporate property acquisitions correlate with the
+							demographic exclusion of Black and Hispanic communities, or is capital targeting specific
+							"transitioning" neighborhoods?</strong></p>
+					<p>Prior to beginning the visual analysis, I intend to map the geographic footprint of corporate
+						landlords to determine whether they are disproportionately acquiring properties in Black,
+						Hispanic, and Asian communities. This motivation stems from the "Homes for All Massachusetts"
+						report, which starkly illustrates the severe racial inequities in eviction filings across
+						municipalities like Boston and Brockton. The report demonstrates that evictions are not random
+						occurrences but highly targeted spatial phenomena. Furthermore, the New York Times investigation
+						into 83 million eviction records emphasizes the sweeping, intimate devastation this crisis
+						inflicts upon families. I aim to investigate whether corporate landlords act as the primary
+						spatial drivers of these neighborhood-level displacements, thereby systematically reshaping the
+						demographic and cultural fabric of the city.</p>
+				</li>
+				<li>
+					<p><strong>Are corporate investors systematically targeting and removing multi-family housing
+							typologies—specifically Boston's historic two-family and three-family residences—from the
+							local ownership market?</strong></p>
+					<p>Historically, the "triple-decker" was uniquely designed as a crucial mechanism for working-class
+						wealth building, functioning to offer affordable, multi-generational living within a compact
+						urban footprint. The New York Times piece discusses how the commodification of housing alters
+						communities at a fundamental structural level. By analyzing the property types and bedroom
+						counts associated with these real estate transactions, I seek to ascertain if the architectural
+						"missing middle" is being monopolized. If corporate entities are dominating the acquisition of
+						these specific structures, they are fundamentally subverting the original architectural purpose
+						of Boston's housing stock, transforming community-sustaining residences into purely speculative
+						financial assets.</p>
+				</li>
+				<li>
+					<p><strong>To what extent do predatory market tactics, such as rapid property flipping and
+							intentional "warehousing," restrict the available housing supply and exacerbate neighborhood
+							instability?</strong></p>
+					<p>This inquiry bridges the disciplines of urban economics and urban planning. Both the eviction
+						data highlighted in the New York Times and the structural inequalities detailed in the "Homes
+						for All" report point to a housing market ecosystem that prioritizes capital accumulation over
+						residential stability. From a planning perspective, a vacant building signifies both a
+						neighborhood blight and a failure of spatial utilization. I am motivated to examine the
+						correlation between high corporate ownership rates and localized vacancy rates. If institutional
+						investors are intentionally leaving buildings empty to artificially inflate neighborhood rents
+						or facilitate future flipping, it represents a manufactured scarcity that directly fuels the
+						ongoing eviction crisis.</p>
+				</li>
+			</ol>
+		</section>
+
+		<section>
+			<h2>Discoveries &amp; Insights</h2>
+
+			<figure>
+				<img src="image/figure1.png"
+					alt="Geographic heat map showing the spatial concentration of corporate ownership rates across Boston neighborhoods, highlighting the highest density in the South Boston Waterfront and Downtown areas." />
+				<figcaption>
+					<strong>Spatial Distribution of Corporate Ownership (2024).</strong> This choropleth map
+					visualizes the average corporate ownership rate across Boston neighborhoods, utilizing GeoJSON
+					boundary data. The spatial distribution reveals a stark concentration of corporate acquisitions in
+					the broader downtown area, with the South Boston Waterfront, Downtown, and the Longwood Medical Area
+					exhibiting the highest rates of corporate control.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="image/figure2.png"
+					alt="Time-series line graph illustrating the steady increase of corporate ownership rates diverging from the declining owner-occupancy rates in Boston from 2004 to 2024." />
+				<figcaption>
+					<strong>Historical Trajectories of Ownership Models.</strong> Tracking longitudinal data
+					since 2004, Boston's corporate ownership rate demonstrates a steady, systemic increase, punctuated
+					by a sharper acceleration following the onset of the COVID-19 pandemic in 2020. Conversely, the
+					owner-occupancy rate exhibits a gradual but persistent decline. Notably, the data reveals a critical
+					threshold crossed in 2023, where the aggregate corporate-owned rate surpassed the owner-occupancy
+					rate citywide.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="image/figure3.png"
+					alt="Normalized small multiple line charts breaking down the percentage growth of corporate ownership versus owner-occupancy rates for each individual Boston neighborhood." />
+				<figcaption>
+					<strong>Neighborhood-Level Corp vs Owner occupied Growth.</strong> These charts
+					disaggregate
+					the overarching citywide trends into neighborhood-specific trajectories for both corporate ownership
+					and owner-occupancy rates. To facilitate an intuitive comparison of relative growth dynamics, all
+					baselines are normalized to zero at the year 2004. The resulting localized growth rankings highlight
+					spatial inequities in property commodification and will serve as foundational metrics for subsequent
+					correlational analysis.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="image/figure4a.png"
+					alt="Choropleth map of Boston neighborhoods shading areas darker blue to indicate a higher total minority population share." />
+				<img src="image/figure4b.png"
+					alt="Choropleth map of Boston neighborhoods shading areas darker blue to indicate a higher black and latino population share." />
+				<figcaption>
+					<strong>Choropleth maps of demographies</strong> These complementary diagrams assess
+					the demographic composition of Boston's neighborhoods, focusing on the spatial concentration of
+					minority populations relative to total residency. The choropleth map (top) utilizes darker shading
+					to denote higher minority population shares, prominently identifying Roxbury, Mattapan, Dorchester,
+					and Hyde Park. The accompanying chart (bottom) isolates Black and Latino demographics—groups
+					specifically identified by the New York Times as facing disproportionately high eviction and
+					displacement threats—directing analytical focus toward systemic vulnerabilities in Dorchester.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="image/figure5.png"
+					alt="Dual bar charts sorting Boston neighborhoods by corporate ownership rates alongside their corresponding minority population demographics." />
+				<figcaption>
+					<strong>Correlating Corporate and owner occupancy rates with Demographic
+						Profiles.</strong> This visual
+					addresses the primary research question regarding the demographic targeting of corporate
+					acquisitions. By sorting neighborhoods by their 2024 corporate ownership and owner occupancy rates
+					from left to right (highest to lowest), and mapping minority (in orange) and black&latino (in blue),
+					we can see that a higher corporate ownership rate is oppositely correlated with a higher minority
+					population rate, and a higher owner occupancy rate is correlated with a higher minority population
+					rate.
+
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="image/figure6a.png"
+					alt="Scatter plot detailing the relationship between corporate ownership growth rates vs black&latino population" />
+				<img src="image/figure6b.png"
+					alt="Scatter plot detailing the relationship between owner-occupancy growth rates vs black&latino population" />
+				<figcaption>
+					<strong>Correlating Corporate and owner occupancy growth rates with black&latino
+						population.</strong> Integrating the
+					prior neighborhood rankings, this visualization maps corporate ownership growth rates (top) and
+					owner-occupancy growth rates (bottom) against black&latino population. Showing a clearer correlation
+					between the two.
+
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="image/figure7.png"
+					alt="Bar chart indicating the purchase of 2-3 family homes by corporate entities vs individual buyers." />
+				<figcaption>
+					<strong>The 'Missing Middle'?</strong> This plot examines property
+					typologies, demonstrating that historic two-family and three-family residences
+					(the localized "triple-decker" code 104 and 105) are actually not dominiated by corporate buyers, in
+					contrary to my original hypothesis.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="image/figure8.png"
+					alt="Scatter plot correlating local vacancy rates with high corporate ownership percentages." />
+				<figcaption>
+					<strong>Analyzing Potential 'Warehousing' Practices.</strong> To address the
+					hypothesis of intentionally manufactured scarcity, this scatter plot correlates
+					neighborhood residential vacancy rates with their respective corporate ownership densities, aiming
+					to reveal if high-investor areas suffer from disproportionate spatial underutilization. However, the
+					vacnacy rate doesnt really increase much after an increase in corporate ownership rate.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="image/figure9.png" alt="Corporate yearly purchase timeline" />
+				<figcaption>
+					<strong>Corporate yearly purchase timeline</strong> This visualization seeks to understand the
+					purchase pattern of corproate entities over time. It shows that corporate purchases have a slight
+					tick during witner time (where individual buyers are less active). Not exactly clear pattern.
+
+				</figcaption>
+			</figure>
+
+			<section>
+				<h2>Summary</h2>
+
+				<p>The data illustrates a significant transformation in Boston’s housing market, characterized by a
+					steady rise in corporate ownership that culminated in 2023 when the citywide corporate-owned rate
+					officially surpassed the owner-occupancy rate. This trend accelerated following the onset of the
+					COVID-19 pandemic, with corporate control now heavily concentrated in areas like the South Boston
+					Waterfront and Downtown. Yet, a higher corporate ownership rates are currently found in
+					neighborhoods
+					with higher minority populations, and the corporate ownership rate is not positively
+					correlated with Black and Latino communities.
+
+				</p>
+
+				<p>Visual analysis debunked several hypotheses regarding predatory market tactics, specifically the idea
+					that investors are monopolizing the "missing middle" or intentionally "warehousing" units. The data
+					reveals that historic two-family and three-family residences, known as "triple-deckers," are not
+					dominated by corporate buyers but remain largely under individual ownership. Furthermore, there is
+					no evidence of "manufactured scarcity" through intentional vacancies, as vacancy rates do not rise
+					significantly alongside increases in corporate ownership. These findings suggest that while
+					corporate expansion is a reality, it has not yet overtaken the specific architectural typologies
+					historically used for working-class wealth building.
+				</p>
+
+				<p> Despite the lack of evidence for warehousing, the human toll of corporate dominance remains high, as
+					majority-nonwhite neighborhoods face disproportionately higher eviction threats. Across
+					Massachusetts, 43% of all eviction filings occurred in majority-nonwhite neighborhoods, even though
+					these areas account for only 32% of the rental housing stock. Research indicates that landlords with
+					a local stake, such as live-in owners, file significantly fewer evictions for non-payment or cause
+					compared to absentee corporate entities. Consequently, the transition toward corporate control
+					likely exacerbates the regional eviction crisis by replacing community-sustaining residences with
+					speculative assets that prioritize capital accumulation over residential stability.</p>
+			</section>
+	</main>
+</body>
+
+</html>
